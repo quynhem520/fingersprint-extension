@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>User-Agent Switcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-button" data-tab="tab1">Quản lý User-Agent</button>
+    <button class="tab-button" data-tab="tab2">Cài đặt</button>
+    <button class="tab-button" data-tab="tab3">Tạo User-Agent</button>
+    <button class="tab-button" data-tab="tab4">Tạo tài khoản</button>
+  </div>
+
+  <div id="tab1" class="tab-content">
+    <h3>Nhập User-Agent</h3>
+    <input type="text" id="userAgentInput" placeholder="Nhập User-Agent...">
+    <button id="saveBtn">Lưu</button>
+    <input type="text" id="searchInput" placeholder="Tìm kiếm User-Agent...">
+    <h1>Danh sách User-Agent đã lưu</h1>
+    <ul id="savedUAs"></ul>
+    <button id="clearUAs">Xóa tất cả</button>
+    <button id="resetBtn">Đặt lại User-Agent</button>
+    <button id="randomBtn">Đổi User-Agent ngẫu nhiên</button>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <h3>Cài đặt</h3>
+    <button id="toggleBtn">Bật/Tắt User-Agent</button>
+    <p id="currentUAStatus">User-Agent hiện tại: Chưa được đặt</p>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <h3>Tạo User-Agent</h3>
+    <label for="userAgentCount">Số lượng User-Agent:</label>
+    <input type="number" id="userAgentCount" min="1" max="50" value="1">
+    <label for="osSelection">Hệ điều hành:</label>
+    <select id="osSelection">
+      <option value="Android">Android</option>
+      <option value="Windows">Windows</option>
+      <option value="macOS">macOS</option>
+      <option value="Linux">Linux</option>
+    </select>
+    <label for="browserType">Trình duyệt:</label>
+    <select id="browserType">
+      <option value="Chrome">Chrome</option>
+      <option value="Opera">Opera</option>
+      <option value="Firefox">Firefox</option>
+      <option value="Safari">Safari</option>
+    </select>
+    <label for="chromeVersion">Phiên bản Chrome (tùy chọn):</label>
+    <input type="text" id="chromeVersion" placeholder="VD: 100.0.4896.127">
+    <label>
+      <input type="checkbox" id="includeBuild"> Bao gồm mã build
+    </label>
+    <label>
+      <input type="checkbox" id="includeHardware"> Bao gồm kiến trúc phần cứng
+    </label>
+    <button id="generateBtn">Tạo User-Agent</button>
+    <textarea id="resultBox" rows="10" cols="50" readonly></textarea>
+    <button id="copyBtn">Sao chép vào clipboard</button>
+    <button id="saveBtn">Lưu vào file</button>
+    <p id="statusMessage" class="status-message"></p>
+  </div>
+
+  <div id="tab4" class="tab-content">
+    <h3>Tạo tài khoản ngẫu nhiên</h3>
+    <button id="createAccountBtn">Tạo tài khoản</button>
+    <textarea id="accountResultBox" rows="3" cols="50" readonly></textarea>
+  </div>
+
+  <script src="combined.js"></script>
+</body>
+</html>
