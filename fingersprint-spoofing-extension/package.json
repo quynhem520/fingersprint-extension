@@ -1,0 +1,47 @@
+{
+    "name": "fingerprint-spoofing-extension",
+    "version": "1.0.0",
+    "description": "A Chrome extension for fingerprint spoofing.",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node src/index.js",
+      "build": "echo 'Build process not defined yet.'"
+    },
+    "dependencies": {
+      "jsdom": "^26.0.0"
+    },
+    "devDependencies": {},
+    "author": "quynhem520",
+    "license": "MIT",
+    "manifest_version": 3,
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "src/background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["src/content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "src/popup/popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "engines": {
+      "node": ">=16.0.0"
+    },
+    "keywords": [
+      "chrome-extension",
+      "fingerprint",
+      "spoofing",
+      "privacy"
+    ]
+  }

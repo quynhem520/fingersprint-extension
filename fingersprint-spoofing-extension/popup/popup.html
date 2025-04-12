@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giả Mạo Dấu Vân Tay</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Giả Mạo Dấu Vân Tay</h1>
+        <div class="section">
+            <h2>Thông Tin Hệ Thống</h2>
+            <p><strong>Trình Duyệt:</strong> <span id="user-agent">Đang tải...</span></p>
+            <p><strong>Múi Giờ:</strong> <span id="time-zone">Đang tải...</span></p>
+        </div>
+        <div class="section">
+            <h2>Hành Động</h2>
+            <button id="spoof-button">Giả Mạo Dấu Vân Tay</button>
+            <button id="generate-fingerprint">Tạo Dấu Vân Tay</button>
+        </div>
+        <div class="section">
+            <h2>Dấu Vân Tay Được Tạo</h2>
+            <pre id="fingerprint-output">Chưa tạo dấu vân tay nào.</pre>
+        </div>
+        <div class="section">
+            <h2>Hành Động</h2>
+            <button id="reset-button">Đặt Lại</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

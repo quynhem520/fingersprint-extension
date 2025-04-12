@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Giả Mạo Dấu Vân Tay",
+    "version": "1.0.0",
+    "description": "Tiện ích tạo và giả mạo dấu vân tay ngẫu nhiên.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "src/background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
