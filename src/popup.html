@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fingerprint Spoofer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Fingerprint Spoofer</h1>
+  <div>
+    <label>
+      <input type="checkbox" id="toggle-fingerprint">
+      Enable Fake Fingerprint
+    </label>
+  </div>
+  <div>
+    <label for="timezone">Time Zone:</label>
+    <input type="text" id="timezone" placeholder="e.g., Asia/Ho_Chi_Minh">
+  </div>
+  <div>
+    <label for="user-agent">User-Agent:</label>
+    <input type="text" id="user-agent" placeholder="e.g., Custom User-Agent">
+  </div>
+  <button id="save-settings">Save</button>
+  <script src="popup.js"></script>
+</body>
+</html>
